@@ -1,5 +1,5 @@
 'use strict';
 
-var gulp_bitcore = require('bitcore-build');
+var gulp_mangacore = require('mangacore-build');
 
-gulp_bitcore('payment-protocol');
+gulp_mangacore('payment-protocol');

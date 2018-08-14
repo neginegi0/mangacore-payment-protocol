@@ -1,5 +1,5 @@
 # Payment Protocol
-`PaymentProtocol` and associated functions and methods will serialize, deserialize, sign and verify payment protocol messages both in Node.js and web browsers. Both X.509 and [bitcoin identity protocol](https://en.bitcoin.it/wiki/Identity_protocol_v1) are supported. For detailed technical information, please view [BIP70](https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki).
+`PaymentProtocol` and associated functions and methods will serialize, deserialize, sign and verify payment protocol messages both in Node.js and web browsers. Both X.509 and [mangacoin identity protocol](https://en.mangacoin.it/wiki/Identity_protocol_v1) are supported. For detailed technical information, please view [BIP70](https://github.com/mangacoin/bips/blob/master/bip-0070.mediawiki).
 
 ## Installation
 Payment protocol is implemented as a separate module and you must add it to your dependencies:
@@ -7,22 +7,22 @@ Payment protocol is implemented as a separate module and you must add it to your
 For node projects:
 
 ```
-npm install bitcore-lib --save
-npm install bitcore-payment-protocol --save
+npm install mangacore-lib --save
+npm install mangacore-payment-protocol --save
 ```
 
 For client-side projects:
 
 ```
-bower install bitcore-lib --save
-bower install bitcore-payment-protocol --save
+bower install mangacore-lib --save
+bower install mangacore-payment-protocol --save
 ```
 
 ## Make Payment Details
 Here the merchant's server will construct the payment details message:
 
 ```javascript
-var PaymentProtocol = require('bitcore-payment-protocol');
+var PaymentProtocol = require('mangacore-payment-protocol');
 var now = Date.now() / 1000 | 0;
 
 // construct the payment details
@@ -36,7 +36,7 @@ details.set('payment_url', 'https://localhost/-/pay');
 details.set('merchant_data', new Buffer({size: 7})); // identify the request
 ```
 
-For more information about these fields please visit [BIP70](https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki#paymentdetailspaymentrequest)
+For more information about these fields please visit [BIP70](https://github.com/mangacoin/bips/blob/master/bip-0070.mediawiki#paymentdetailspaymentrequest)
 
 ## Sign a Payment Request
 The merchant's server will then construct a payment request and send it to the customer:
@@ -141,7 +141,7 @@ var transactions = payment.get('transactions');
 var refund_to = payment.get('refund_to');
 var memo = payment.get('memo');
 
-// send the transaction to the bitcoin network
+// send the transaction to the mangacoin network
 ```
 
 ## Send a Payment Acknowledgement
@@ -174,4 +174,4 @@ var payment = new PaymentProtocol().makePayment(decodedPayment);
 var tx = payment.message.transactions[0];
 ```
 
-For detailed diagram of the exchange of messages, please see the [Protocol section of BIP70](https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki#protocol).
+For detailed diagram of the exchange of messages, please see the [Protocol section of BIP70](https://github.com/mangacoin/bips/blob/master/bip-0070.mediawiki#protocol).

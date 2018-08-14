@@ -1,30 +1,30 @@
-Bitcore Payment Protocol
+Mangacore Payment Protocol
 =======
 
-[![NPM Package](https://img.shields.io/npm/v/bitcore-payment-protocol.svg?style=flat-square)](https://www.npmjs.org/package/bitcore-payment-protocol)
-[![Build Status](https://img.shields.io/travis/bitpay/bitcore-payment-protocol.svg?branch=master&style=flat-square)](https://travis-ci.org/bitpay/bitcore-payment-protocol)
-[![Coverage Status](https://img.shields.io/coveralls/bitpay/bitcore-payment-protocol.svg?style=flat-square)](https://coveralls.io/r/bitpay/bitcore-payment-protocol)
+[![NPM Package](https://img.shields.io/npm/v/mangacore-payment-protocol.svg?style=flat-square)](https://www.npmjs.org/package/mangacore-payment-protocol)
+[![Build Status](https://img.shields.io/travis/bitpay/mangacore-payment-protocol.svg?branch=master&style=flat-square)](https://travis-ci.org/bitpay/mangacore-payment-protocol)
+[![Coverage Status](https://img.shields.io/coveralls/bitpay/mangacore-payment-protocol.svg?style=flat-square)](https://coveralls.io/r/bitpay/mangacore-payment-protocol)
 
-A module for [bitcore](https://github.com/bitpay/bitcore) that implements [Payment Protocol](https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki) and other related BIPs.
+A module for [mangacore](https://github.com/bitpay/mangacore) that implements [Payment Protocol](https://github.com/mangacoin/bips/blob/master/bip-0070.mediawiki) and other related BIPs.
 
 ## Getting Started
 
 This library is distributed in both the npm and bower packaging systems.
 
 ```sh
-npm install bitcore-lib
-npm install bitcore-payment-protocol
+npm install mangacore-lib
+npm install mangacore-payment-protocol
 ```
 
 ```sh
-bower install bitcore-lib
-bower install bitcore-payment-protocol
+bower install mangacore-lib
+bower install mangacore-payment-protocol
 ```
 
-There are many examples of how to use it on the developer guide [section for payment protocol](https://bitcore.io/api/paypro). For example, the following code would verify a payment request:
+There are many examples of how to use it on the developer guide [section for payment protocol](https://mangacore.io/api/paypro). For example, the following code would verify a payment request:
 
 ```javascript
-var PaymentProtocol = require('bitcore-payment-protocol');
+var PaymentProtocol = require('mangacore-payment-protocol');
 
 var body = PaymentProtocol.PaymentRequest.decode(rawbody);
 var request = new PaymentProtocol().makePaymentRequest(body);
@@ -41,10 +41,10 @@ var verified = request.verify();
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/bitpay/bitcore/blob/master/CONTRIBUTING.md) on the main bitcore repo for information about how to contribute.
+See [CONTRIBUTING.md](https://github.com/bitpay/mangacore/blob/master/CONTRIBUTING.md) on the main mangacore repo for information about how to contribute.
 
 ## License
 
-Code released under [the MIT license](https://github.com/bitpay/bitcore/blob/master/LICENSE).
+Code released under [the MIT license](https://github.com/bitpay/mangacore/blob/master/LICENSE).
 
-Copyright 2013-2015 BitPay, Inc. Bitcore is a trademark maintained by BitPay, Inc.
+Copyright 2013-2015 BitPay, Inc. Mangacore is a trademark maintained by BitPay, Inc.

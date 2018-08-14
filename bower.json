@@ -1,18 +1,18 @@
 {
-  "name": "bitcore-payment-protocol",
-  "main": "./bitcore-payment-protocol.min.js",
+  "name": "mangacore-payment-protocol",
+  "main": "./mangacore-payment-protocol.min.js",
   "version": "1.1.1",
-  "homepage": "https://github.com/bitpay/bitcore-payment-protocol",
+  "homepage": "https://github.com/bitpay/mangacore-payment-protocol",
   "authors": [
     "BitPay, Inc."
   ],
-  "description": "BIP70 Payment Protocol support for bitcore",
+  "description": "BIP70 Payment Protocol support for mangacore",
   "moduleType": [
     "globals"
   ],
   "keywords": [
-    "bitcoin",
-    "bitcore",
+    "mangacoin",
+    "mangacore",
     "btc",
     "satoshi"
   ],

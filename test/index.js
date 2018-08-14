@@ -4,9 +4,9 @@ var chai = require('chai');
 var sinon = require('sinon');
 var should = chai.should();
 var expect = chai.expect;
-var bitcore = require('bitcore-lib');
-var PrivateKey = bitcore.PrivateKey;
-var PublicKey = bitcore.PublicKey;
+var mangacore = require('mangacore-lib');
+var PrivateKey = mangacore.PrivateKey;
+var PublicKey = mangacore.PublicKey;
 var KJUR = require('jsrsasign');
 
 var is_browser = process.browser;
@@ -299,7 +299,7 @@ describe('PaymentProtocol', function() {
       var paypro = new PaymentProtocol();
       paypro.makePayment();
       paypro.set('memo', 'test memo');
-      paypro.getContentType().should.equal('application/bitcoin-payment');
+      paypro.getContentType().should.equal('application/mangacoin-payment');
     });
 
   });
